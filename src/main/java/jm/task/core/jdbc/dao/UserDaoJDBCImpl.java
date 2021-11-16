@@ -44,12 +44,12 @@ public class UserDaoJDBCImpl implements UserDao {
         try (Connection conn = Util.getConnection()) {
             String sql =
                     "insert into user (name, lastname, age) values ('" +
-                    name +
-                    "', '" +
-                    lastName +
-                    "',"
-                    + age
-                    + ");";
+                            name +
+                            "', '" +
+                            lastName +
+                            "',"
+                            + age
+                            + ");";
             Statement st = conn.createStatement();
             st.executeUpdate(sql);
             System.out.println("User с именем – " + name + " добавлен в базу данных");
@@ -80,7 +80,7 @@ public class UserDaoJDBCImpl implements UserDao {
                         rs.getByte("age"));
                 result.add(user);
             }
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return result;
