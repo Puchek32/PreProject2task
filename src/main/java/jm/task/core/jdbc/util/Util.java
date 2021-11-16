@@ -14,7 +14,7 @@ public class Util {
         try {
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
         } catch (SQLException e) {
-            System.err.println("ошибка подключения");
+            System.err.println("ошибка подключения или драйвера");
         }
         return connection;
     }
